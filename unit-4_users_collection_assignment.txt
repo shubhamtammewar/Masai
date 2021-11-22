@@ -1,0 +1,67 @@
+1) use assignment
+(creation of database)
+2) db.users.insert({first_name:"Shubham",last_name:"tammewar",email:"abc@ab.com",ip_address:"12.50.56.60",age:24,})
+("users" as a collection point in databse with making of document by addition of fields to the document)
+3) db.users.insertMany([{"first_name":"Vale","last_name":"Knibley","email":"vknibley0@bbb.org","gender":"Agender","ip_address":"248.100.156.86"},
+ {"first_name":"Kali","last_name":"Farrer","email":"kfarrer1@vkontakte.ru","gender":"Agender","ip_address":"217.125.21.163"},
+... {"first_name":"Parsifal","last_name":"Maple","email":"pmaple2@japanpost.jp","gender":"Agender","ip_address":"104.6.169.51"},
+... {"first_name":"Merry","last_name":"Hull","email":"mhull3@stumbleupon.com","gender":"Female","ip_address":"4.96.188.144"},
+... {"first_name":"Vannie","last_name":"Clausius","email":"vclausius4@ezinearticles.com","gender":"Female","ip_address":"149.117.39.34"},
+... {"first_name":"Lonee","last_name":"Von Helmholtz","email":"lvonhelmholtz5@pagesperso-orange.fr","gender":"Female","ip_address":"109.93.199.44"},
+... {"first_name":"Daniele","last_name":"Crimes","email":"dcrimes6@archive.org","gender":"Agender","ip_address":"84.247.102.60"},
+... {"first_name":"Sammy","last_name":"MacArthur","email":"smacarthur7@github.com","gender":"Agender","ip_address":"232.193.146.146"},
+... {"first_name":"Teddi","last_name":"Haffard","email":"thaffard8@imageshack.us","gender":"Polygender","ip_address":"71.250.138.160"},
+... {"first_name":"Berri","last_name":"Asplin","email":"basplin9@china.com.cn","gender":"Male","ip_address":"0.74.241.41"},
+... {"first_name":"Caroline","last_name":"Becconsall","email":"cbecconsalla@csmonitor.com","gender":"Polygender","ip_address":"235.117.227.121"},
+... {"first_name":"Hephzibah","last_name":"McEntegart","email":"hmcentegartb@histats.com","gender":"Male","ip_address":"22.205.131.131"},
+... {"first_name":"Mickie","last_name":"Luby","email":"mlubyc@sbwire.com","gender":"Female","ip_address":"33.195.216.242"}])
+(making more than one documents in collection users with the help of insertMany method)
+4)db.users.insert({"first_name":"Alis","last_name":"Heineken","email":"aheinekend@patch.com","gender":"Non-binary","ip_address":"66.248.253.176"})
+(making one document using insert function)
+5)db.users.insert({"first_name":"Teriann","last_name":"Rouff","email":"trouffe@dot.gov","gender":"Polygender","ip_address":"238.145.102.45"})
+6)db.users.insert({"first_name":"Lambert","last_name":"Jellett","email":"ljelletti@hp.com","gender":"Female","ip_address":"67.194.45.243",})
+7)db.users.insert({"first_name":"Odette","last_name":"Gabbot","email":"ogabbotk@toplist.cz","gender":"Genderqueer","ip_address":"201.14.94.171"})
+8)db.users.insert({"first_name":"Melisa","last_name":"Witherdon","email":"mwitherdonu@chron.com","gender":"Polygender","ip_address":"211.95.226.25"})
+9)db.users.insert({"first_name":"Garret","last_name":"Valenti","email":"gvalenti1n@wiley.com","gender":"Polygender","ip_address":"103.227.244.100"})
+10)db.users.insert({"first_name":"Mireille","last_name":"Dandy","email":"mdandy1p@wired.com","gender":"Agender","ip_address":"91.197.216.102"})
+11)db.users.insert({"first_name":"Milzie","last_name":"Boulder","email":"mboulder25@4shared.com","gender":"Non-binary","ip_address":"25.207.83.62"})
+12)db.users.insert({"first_name":"Blaire","last_name":"Dewdeny","email":"bdewdeny27@msu.edu","gender":"Non-binary","ip_address":"247.203.252.236"})
+13)db.users.insert({"first_name":"Heida","last_name":"Bech","email":"hbech29@epa.gov","gender":"Agender","ip_address":"50.30.97.220"})
+14) db.users.find({})
+(gives out all the documents in the "users" named Collection)
+15) db.users.update({"first_name":"Mickie"},{$set:{"last_name":"t"}})
+(update the first found document with first_name as Mickie)
+16)db.users.update({"first_name":"Shubham"},{$set:{"last_name":"t"}})
+17) db.users.update({"first_name":"shubham"},{$set:{"last_name":"t"}})
+18)db.users.updateMany({"last_name":"t"},{$set:{"hobby":"Intersted in learning new things"}})
+(update all the users with last_name as t)
+19)db.users.remove({"hobby":"Intersted in learning new things"}, 1)
+(remove only one and first found document with field hobby)
+20) db.users.deleteOne({"gender":"Non-binary"})
+(delete the first one which is found with particular field value)
+21)db.users.deleteMany({"gender":"Agender"})
+(deleteMany deletes all the documents with that particular field)
+22)> show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
+test        0.000GB
+> use assignment
+switched to db assignment
+> db.dropDatabase()
+{ "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> use test
+switched to db test
+> db.dropDatabase()
+{ "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+(db.dropDatabase() is used to delete whole databse)
